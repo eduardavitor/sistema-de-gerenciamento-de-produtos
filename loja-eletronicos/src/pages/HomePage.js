@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import Header from '../components/layout/Header';
 import { buscarProdutos } from '../services/mockapi';
-import { Container, Typography, Grid } from '@mui/material'; // 1. Importe o Grid
 import ProductCard from '../components/ProductCard'; // 2. Importe o ProductCard
+import { Container, Typography, Grid, Button } from '@mui/material'; // Adicione Button
+import { Link } from 'react-router-dom'; // Importe o Link
+
 
 function HomePage() {
   const [produtos, setProdutos] = useState([]);
