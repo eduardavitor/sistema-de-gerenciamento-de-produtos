@@ -21,13 +21,18 @@ function HomePage() {
     fetchProdutos();
   }, []);
 
-  return (
+ return (
     <div>
       <Header />
-      <Container sx={{ mt: 4 }}>
+      <Container sx={{ mt: 4,mb: 4}}>
+      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '16px' }}>
         <Typography variant="h4" gutterBottom>
-          Nossos Produtos
+            Nossos Produtos
         </Typography>
+          <Button component={Link} to="/cadastrar" variant="contained" color="primary">
+            Adicionar Produto
+           </Button>
+        </div>
           <Grid container spacing={3}>
           {produtos.map((produto) => (
             <Grid item key={produto.id} xs={12} sm={6} md={4}>
@@ -39,5 +44,6 @@ function HomePage() {
     </div>
   );
 }
+
 
 export default HomePage;
